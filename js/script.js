@@ -4,7 +4,7 @@ $(document).ready(function(){
        e.preventDefault();
        //---- перевірка даних з форми
        var login = $.trim($("#login").val());
-       var psw = $.trim($("#psw").val());
+       var psw = $.trim($("#password").val());
 
        if (login == '' || psw == ''){
            // Якщо форма не пройшла валідацію то виводим картинку з error
@@ -15,7 +15,5 @@ $(document).ready(function(){
            $(this).unbind().submit();
  
        }
-
-
     });
 });

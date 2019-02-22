@@ -1,26 +1,30 @@
 <?php
 
 
-class IndexModel{
+class IndexModel extends Model
+{
 
 
-    public function checkUser(){
+    public function checkUser()
+    {
         $login = $_POST['login'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
 
 
-        $sql = "SELECT * FROM  webdewel_cms WHERE login = :login AND password = :password";
+        $sql = "SELECT * FROM users WHERE login = :login AND password = :password";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue(":login", $login, PDO::PARAM_STR);
         $stmt->bindValue(":password", $password, PDO::PARAM_STR);
 
         $stmt->execute();
-        $res= $stmt->fetch(PDO::FETCH_ASSOC);
+        $res = $stmt->fetch(PDO::FETCH_ASSOC);
 
 
-        if (!empty($res)){
-echo "OK";
-        }else{
+
+
+        if (!empty($res)) {
+            header("Location: /cabinet");
+        } else {
             return false;
         }
     }

@@ -12,22 +12,22 @@ class IndexController extends Controller {
 
     public function index(){
         $this->pageData['title'] = "Enter to cabinet";
-        $this->view->render($this->pageTpl, $this->pageData);
 
         if (!empty($_POST)){
             if (!$this->login()){
-                $this->pageData["eroor"] = "неправельний логін";
+                $this->pageData["error"] = "неправельний логін";
             }
 
         }
 
+
+
+        $this->view->render($this->pageTpl, $this->pageData);
     }
 
     public function login(){
         if (!$this->model->checkUser()){
             return false;
-        }else{
-            echo "okl";
         }
     }
 
