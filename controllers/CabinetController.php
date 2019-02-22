@@ -12,6 +12,8 @@ class CabinetController extends Controller {
     public function index() {
         $this->pageData['title'] = "Кабинет";
 
+
+
         $ordersCount = $this->model->getOrdersCount();
         $this->pageData['ordersCount'] = $ordersCount;
 
@@ -22,6 +24,8 @@ class CabinetController extends Controller {
         $this->pageData['usersCount'] = $usersCount;
 
         $this->view->render($this->pageTpl, $this->pageData);
+
+
     }
 
 }
