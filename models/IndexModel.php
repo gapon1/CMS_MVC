@@ -18,7 +18,7 @@ class IndexModel{
         $res= $stmt->fetch(PDO::FETCH_ASSOC);
 
 
-        if (!empty($re)){
+        if (!empty($res)){
 echo "OK";
         }else{
             return false;
