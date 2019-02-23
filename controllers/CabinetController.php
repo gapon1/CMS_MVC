@@ -18,6 +18,8 @@ class CabinetController extends Controller
             header("Location: /");
         }
 
+
+
         $this->pageData['title'] = "Кабинет";
 
         $ordersCount = $this->model->getOrdersCount();
