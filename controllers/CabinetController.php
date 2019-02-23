@@ -23,6 +23,10 @@ class CabinetController extends Controller {
         $usersCount = $this->model->getUsersCount();
         $this->pageData['usersCount'] = $usersCount;
 
+
+        $orders = $this->model->getOrders();
+        $this->pageData['orders'] = $orders;
+
         $this->view->render($this->pageTpl, $this->pageData);
 
 

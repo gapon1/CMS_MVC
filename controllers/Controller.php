@@ -2,6 +2,7 @@
 
 
 class Controller{
+
     public  $model;
     public  $view;
     protected $pageData = array();//Щоб в views показ динамічні дані

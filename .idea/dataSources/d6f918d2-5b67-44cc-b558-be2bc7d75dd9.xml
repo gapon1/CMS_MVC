@@ -931,133 +931,139 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="233" parent="226" name="PRIMARY">
+    <column id="233" parent="226" name="amount">
+      <Position>3</Position>
+      <DataType>float|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="234" parent="226" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="234" parent="227" name="id">
+    <column id="235" parent="227" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="235" parent="227" name="name">
+    <column id="236" parent="227" name="name">
       <Position>2</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="236" parent="227" name="price">
+    <column id="237" parent="227" name="price">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="237" parent="227" name="PRIMARY">
+    <key id="238" parent="227" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="238" parent="228" name="order_id">
+    <column id="239" parent="228" name="order_id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="239" parent="228" name="product_id">
+    <column id="240" parent="228" name="product_id">
       <Position>2</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="240" parent="228" name="order_id">
+    <index id="241" parent="228" name="order_id">
       <ColNames>order_id
 product_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="241" parent="228" name="productsinorders_ibfk_2">
+    <index id="242" parent="228" name="productsinorders_ibfk_2">
       <ColNames>product_id</ColNames>
       <Type>btree</Type>
     </index>
-    <foreign-key id="242" parent="228" name="productsinorders_ibfk_1">
+    <foreign-key id="243" parent="228" name="productsinorders_ibfk_1">
       <ColNames>order_id</ColNames>
       <RefSchemaName>webdewel_cms</RefSchemaName>
       <RefTableName>orders</RefTableName>
       <RefColNames>id</RefColNames>
       <OnUpdate>cascade</OnUpdate>
     </foreign-key>
-    <foreign-key id="243" parent="228" name="productsinorders_ibfk_2">
+    <foreign-key id="244" parent="228" name="productsinorders_ibfk_2">
       <ColNames>product_id</ColNames>
       <RefSchemaName>webdewel_cms</RefSchemaName>
       <RefTableName>products</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="244" parent="229" name="id">
+    <column id="245" parent="229" name="id">
       <Position>1</Position>
       <DataType>tinyint(3) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="245" parent="229" name="name">
+    <column id="246" parent="229" name="name">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="246" parent="229" name="PRIMARY">
+    <key id="247" parent="229" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="247" parent="230" name="id">
+    <column id="248" parent="230" name="id">
       <Position>1</Position>
       <DataType>int(10) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="248" parent="230" name="login">
+    <column id="249" parent="230" name="login">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="249" parent="230" name="fullName">
+    <column id="250" parent="230" name="fullName">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="250" parent="230" name="email">
+    <column id="251" parent="230" name="email">
       <Position>4</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="251" parent="230" name="password">
+    <column id="252" parent="230" name="password">
       <Position>5</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="252" parent="230" name="role_id">
+    <column id="253" parent="230" name="role_id">
       <Position>6</Position>
       <DataType>tinyint(3) unsigned|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="253" parent="230" name="role_id">
+    <index id="254" parent="230" name="role_id">
       <ColNames>role_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="254" parent="230" name="PRIMARY">
+    <key id="255" parent="230" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="255" parent="230" name="users_ibfk_1">
+    <foreign-key id="256" parent="230" name="users_ibfk_1">
       <ColNames>role_id</ColNames>
       <RefSchemaName>webdewel_cms</RefSchemaName>
       <RefTableName>role</RefTableName>
