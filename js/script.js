@@ -9,6 +9,9 @@ $(document).ready(function(){
        if (login == '' || psw == ''){
            // Якщо форма не пройшла валідацію то виводим картинку з error
            $("img.avatar").attr("src", "images/user_error.png");
+           function func() {location.reload();}
+           setTimeout(func, 2000);
+
        }else {
            // Якщо валідація пройдена то OK
            $("img.avatar").attr("src", "images/user_ok.png");

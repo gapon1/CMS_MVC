@@ -4,7 +4,6 @@
 class IndexModel extends Model
 {
 
-
     public function checkUser()
     {
         $login = $_POST['login'];
@@ -23,8 +22,11 @@ class IndexModel extends Model
 
 
         if (!empty($res)) {
+            $_SESSION['user'] = $login;
+            sleep(2);
             header("Location: /cabinet");
         } else {
+            sleep(2);
             return false;
         }
     }
